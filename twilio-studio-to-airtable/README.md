@@ -1,4 +1,4 @@
-In this video we are creating a Twilio Studio SMS workflow that collects email addresses and adds them to Airtable. The records are sent to Airtable with a Twilio function that uses the Airtable API
+In this video we are creating a Twilio Studio SMS workflow that collects email addresses and writes them to Airtable. The records are sent to Airtable with a Twilio function that uses the Airtable API
 
 The regular expression I used for the email addresses
 
