@@ -1,3 +1,10 @@
+Link to the Youtube video:
+https://youtu.be/Q0WHwhQPfG8
+
+The other 2 videos in the series:
+1.  First (single branch) - https://youtu.be/itiNtqnvslo
+2. Second (multiple branches, merge vs rebase): https://youtu.be/rhGp8MSn3rs
+
 # Initialize the repository
 ```
 # pull repository from the internet to localhost
