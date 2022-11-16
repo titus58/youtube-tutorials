@@ -1,5 +1,7 @@
 ## Description
-This is the source code and URLs used in a video tutorial about deploying a Kotlin Spring Boot application to Google App Engine.
+This is the source code and URLs used in the Youtube tutorial linked below. The video is about deploying a Kotlin Spring Boot application to Google App Engine.
+
+https://youtu.be/CTOzL9aixQs
 
 ## URLs used
 
