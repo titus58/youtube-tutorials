@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet id="1" author="vlad">
+        <createTable tableName="produce">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="rating" type="int">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+
+        <insert tableName="produce">
+            <column name="name" value="apples" />
+            <column name="rating" value="4" />
+        </insert>
+        <insert tableName="produce">
+            <column name="name" value="oranges" />
+            <column name="rating" value="1" />
+        </insert>
+        <insert tableName="produce">
+            <column name="name" value="tomatoes" />
+            <column name="rating" value="3" />
+        </insert>
+        <insert tableName="produce">
+            <column name="name" value="potatoes" />
+            <column name="rating" value="2" />
+        </insert>
+        <insert tableName="produce">
+            <column name="name" value="carrots" />
+            <column name="rating" value="5" />
+        </insert>
+        <insert tableName="produce">
+            <column name="name" value="bananas" />
+            <column name="rating" value="4" />
+        </insert>
+        <insert tableName="produce">
+            <column name="name" value="peppers" />
+            <column name="rating" value="2" />
+        </insert>
+        <insert tableName="produce">
+            <column name="name" value="avocado" />
+            <column name="rating" value="1" />
+        </insert>
+        <insert tableName="produce">
+            <column name="name" value="blueberry" />
+            <column name="rating" value="3" />
+        </insert>
+        <insert tableName="produce">
+            <column name="name" value="pears" />
+            <column name="rating" value="5" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>
