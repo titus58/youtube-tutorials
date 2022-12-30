@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+
+    <changeSet id="1" author="vlad">
+        <sql>
+            create table users(
+                username varchar(50) not null primary key,
+                password varchar(500) not null,
+                enabled boolean not null
+            );
+
+            create table authorities (
+            username varchar(50) not null,
+            authority varchar(50) not null,
+            constraint fk_authorities_users foreign key(username) references users(username)
+            );
+            create unique index ix_auth_username on authorities (username,authority);
+        </sql>
+    </changeSet>
+
+    <changeSet id="2" author="vlad">
+        <insert tableName="users">
+            <column name="username">db_user</column>
+            <column name="password">{bcrypt}$2a$10$hOYKi5u3crvY8L70VWcSOuslH3fB/.dJsUe9a7zIAGWfPDzMGi9KC</column>
+            <column name="enabled">1</column>
+        </insert>
+        <insert tableName="users">
+            <column name="username">db_admin</column>
+            <column name="password">{bcrypt}$2a$10$hOYKi5u3crvY8L70VWcSOuslH3fB/.dJsUe9a7zIAGWfPDzMGi9KC</column>
+            <column name="enabled">1</column>
+        </insert>
+        <insert tableName="authorities">
+            <column name="username">db_user</column>
+            <column name="authority">ROLE_USER</column>
+        </insert>
+        <insert tableName="authorities">
+            <column name="username">db_admin</column>
+            <column name="authority">ROLE_USER</column>
+        </insert>
+        <insert tableName="authorities">
+            <column name="username">db_admin</column>
+            <column name="authority">ROLE_ADMIN</column>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
