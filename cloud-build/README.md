@@ -2,7 +2,7 @@
 
 In this video we will use Cloud Build on a Dockerized project for pushing an image to Container Registry. Then, in the second part, we will see how we can optize builds by caching from previously built images.
 
-Depending on the name of your virtual environment, you might night to adjust the `.gcloudignore` file to include that directory.
+Depending on the name of your virtual environment, you might need to adjust the `.gcloudignore` file to include that directory.
 
 ## Commands
 
