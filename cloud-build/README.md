@@ -19,7 +19,7 @@ gcloud builds submit -t gcr.io/[YOUR_PROJECT_ID]/builds-quickstart --async
 
 Submit project to Cloud Build with `cloudbuild.yaml` file
 ```shell
-gcloud builds submit --async
+gcloud builds submit . --async
 ```
 
 ## URLs
