@@ -14,7 +14,7 @@ docker run build-quickstart
 
 Submit project to Cloud Build without `cloudbuild.yaml` file
 ```shell
-gcloud builds submit -t gcr.io/[YOUR_PROJECT_ID]/build-quickstart --async
+gcloud builds submit -t gcr.io/[YOUR_PROJECT_ID]/builds-quickstart --async
 ```
 
 Submit project to Cloud Build with `cloudbuild.yaml` file
