@@ -1,0 +1,38 @@
+{
+    "taskGroups": [
+        {
+            "taskSpec": {
+                "runnables": [
+                    {
+                        "container": {
+                            "imageUri": "gcr.io/smiling-gasket-386019/batch-quickstart@sha256:5740da04d172e99e0beb7ec8f561b407a02b96dca9849524004e4d9c91a083e1"
+                        },
+                        "environment": {
+                            "variables": {
+                                "SECRET": "abc123"
+                            }
+                        }
+                    }
+                ],
+                "computeResource": {
+                    "cpuMilli": 1000,
+                    "memoryMib": 256
+                }
+            },
+            "taskCount": 2,
+            "parallelism": 2
+        }
+    ],
+    "allocationPolicy": {
+        "instances": [
+            {
+                "policy": {
+                    "machineType": "e2-standard-4"
+                }
+            }
+        ]
+    },
+    "logsPolicy": {
+        "destination": "CLOUD_LOGGING"
+    }
+}
